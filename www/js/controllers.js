@@ -14,9 +14,12 @@ angular.module('starter')
   console.log('=> ProjectDetailCtrl (' + $scope.project.name + ')')
 })
 
-.controller('TaskListCtrl', function($scope) {
-  console.log('\t=> TaskListCtrl')
+.controller('TaskListCtrl', function($scope, $stateParams) {
   $scope.tasks = $scope.project.tasks;
+
+  console.log('\t=> TaskListCtrl')
+  console.log('\t\t=> $stateParams: ', $stateParams)
+  console.log('\t\t=> $scope.tasks[0].title: ', $scope.tasks[0].title)
 })
 
 .controller('TaskDetailCtrl', function($scope) {
