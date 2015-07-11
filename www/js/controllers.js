@@ -22,8 +22,10 @@ angular.module('starter')
   console.log('\t\t=> $scope.tasks[0].title: ', $scope.tasks[0].title)
 })
 
-.controller('TaskDetailCtrl', function($scope) {
-  console.log('\t\t=> TaskDetailCtrl')
+.controller('TaskDetailCtrl', function($scope, task) {
+  console.log('\t=> TaskDetailCtrl')
+  console.log('\t\t=> task: ', task.title)
+  $scope.task = task;
 })
 
 .controller('MessageListCtrl', function($scope) {

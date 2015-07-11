@@ -3,8 +3,9 @@
 
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat='task in tasks' ui-sref="#">
+      <ion-item class="item-icon-right" ng-repeat='task in tasks' ui-sref="project.task-detail({taskID: task.id})">
         {{ task.title }}
+        <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
   </ion-content>

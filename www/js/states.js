@@ -31,6 +31,21 @@ angular.module('starter')
     }
     // Use resolve to set `tasks = $scope.project.tasks?`
   })
+  
+  .state('project.task-detail', {
+    url: '/tasks/:taskID',
+    views: {
+      'tasks-tab': {
+        templateUrl: 'templates/task.detail.html',
+        controller: 'TaskDetailCtrl'
+      }
+    },
+    resolve: {
+      task: function($stateParams, Projects) {
+        return Projects.getTask($stateParams.projectID, $stateParams.taskID)
+      }
+    }
+  })
 
   .state('project.messages', {
     url: '/messages',

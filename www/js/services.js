@@ -48,6 +48,21 @@ angular.module('starter')
 
     return project
   }
+  
+  Projects.getTask = function(projectID, taskID) {
+    var project = Projects.get(projectID),
+        task = null;
+        
+    if(project && project.tasks && project.tasks.length) {
+      angular.forEach(project.tasks, function(t) {
+        if(taskID.toString() === t.id.toString()) {
+          task = t;
+        }
+      })
+    }
+    
+    return task;
+  }
 
   return Projects
 
