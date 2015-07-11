@@ -1,0 +1,12 @@
+<ion-view>
+  <ion-nav-title>{{ project.name }}: Messages</ion-nav-title>
+
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat='message in messages' ui-sref="#">
+        {{ message.title }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>

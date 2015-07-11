@@ -1,0 +1,11 @@
+<ion-tabs class="tabs-icon-top">
+
+  <ion-tab title="{{ project.name }} Tasks" icon='ion-checkmark' ui-sref='project.tasks({projectID: project.id})'>
+    <ion-nav-view name='tasks-tab'></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title='{{ project.name }} Messages' icon='ion-chatboxes' ui-sref='project.messages({projectID: project.id})'>
+    <ion-nav-view name='messages-tab'></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
