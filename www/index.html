@@ -41,7 +41,9 @@
               menu-close
               ui-sref-active="active"
               ng-repeat="project in projects"
-              ui-sref="project.tasks({projectID: project.id})">
+              href="/#/projects/{{project.id}}/tasks"
+              >
+              <!-- ui-sref="project.tasks({projectID: project.id})" -->
                 {{ project.name }}
             </ion-item>
           </ion-list>
