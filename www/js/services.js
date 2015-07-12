@@ -1,3 +1,7 @@
+/*
+*   `Projects` is a mock service used to spit back dummy data.
+*/
+
 angular.module('starter')
 
 .factory('Projects', function() {
