@@ -56,6 +56,21 @@ angular.module('starter')
       }
     }
   })
+  
+  .state('project.message-detail', {
+    url: '/messages/:messageID',
+    views: {
+      'messages-tab': {
+        templateUrl: 'templates/message.detail.html',
+        controller: 'MessageDetailCtrl'
+      }
+    },
+    resolve: {
+      message: function($stateParams, Projects) {
+        return Projects.getMessage($stateParams.projectID, $stateParams.messageID)
+      }
+    }
+  })
 
   $urlRouterProvider.otherwise('/home');
 });

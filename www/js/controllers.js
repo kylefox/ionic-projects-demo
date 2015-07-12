@@ -33,6 +33,7 @@ angular.module('starter')
   $scope.messages = $scope.project.messages
 })
 
-.controller('MessageDetailCtrl', function($scope) {
+.controller('MessageDetailCtrl', function($scope, message) {
   console.log('\t\t=> MessageDetailCtrl')
+  $scope.message = message;
 })

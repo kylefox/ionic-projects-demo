@@ -49,19 +49,27 @@ angular.module('starter')
     return project
   }
   
-  Projects.getTask = function(projectID, taskID) {
+  Projects.getItem = function(itemType, projectID, itemID) {
     var project = Projects.get(projectID),
-        task = null;
+        item = null;
         
-    if(project && project.tasks && project.tasks.length) {
-      angular.forEach(project.tasks, function(t) {
-        if(taskID.toString() === t.id.toString()) {
-          task = t;
+    if(project && project[itemType] && project[itemType].length) {
+      angular.forEach(project[itemType], function(i) {
+        if(itemID.toString() === i.id.toString()) {
+          item = i;
         }
       })
     }
     
-    return task;
+    return item;
+  }
+  
+  Projects.getTask = function(projectID, taskID) {
+    return Projects.getItem('tasks', projectID, taskID);
+  }
+  
+  Projects.getMessage = function(projectID, taskID) {
+    return Projects.getItem('messages', projectID, taskID);
   }
 
   return Projects
