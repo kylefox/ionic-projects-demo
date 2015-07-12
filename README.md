@@ -4,6 +4,9 @@ This is a sample Ionic app that demonstrates using `ion-side-menus` and `ion-tab
 
 The basic idea is: choose a Project from the side menu, then use the Tasks and Messages tabs to traverse that Project's navigation hierarchy.
 
+**Live Demo:** [ionic-projects-demo.kylefox.ca](http://ionic-projects-demo.kylefox.ca)
+**Video:** [ionic-projects-demo.kylefox.ca/demo.mp4](http://ionic-projects-demo.kylefox.ca/demo.mp4)
+
 **I am brand new to Ionic and would LOVE any feedback.** If there's a better way to structure or code the app, please let me know! :)
 
 Existing demos I found did not illustrate the requirement I had:
